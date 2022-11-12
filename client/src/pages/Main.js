@@ -65,6 +65,8 @@ const Main = () => {
   };
 
   const groupByResponsible = () => {
+    handleChange(0, "responsible");
+    handleChange(0, "dateEnd");
     setError("");
     setTask([]);
     setLoading(true);
@@ -75,6 +77,8 @@ const Main = () => {
   };
 
   const groupByDate = () => {
+    handleChange(0, "responsible");
+    handleChange(0, "dateEnd");
     setError("");
     setTask([]);
     setLoading(true);
