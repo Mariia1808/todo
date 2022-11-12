@@ -1,0 +1,29 @@
+@import './color';
+
+.Task {
+  background-color: rgb(245 245 245);
+  min-width: 70%;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  cursor: pointer;
+
+  @each $key, $color in $colorList {
+    &_title_#{$key} {
+      color: $color;
+    }
+  }
+}
+
+.Modal {
+  background-color: #ebebeb;
+  margin: 200px auto;
+  max-width: 470px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  top: auto;
+}
