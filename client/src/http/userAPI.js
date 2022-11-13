@@ -38,18 +38,15 @@ export const auth = async (login, password) => {
 
 export const getManager = async () => {
   const { data } = await $host.get("user/manager");
-  console.log(data);
   return data;
 };
 
 export const getResponsible = async (manager) => {
   const { data } = await $authHost.get("user/responsible/" + manager);
-  console.log(data);
   return data;
 };
 
 export const getOne = async (id) => {
   const { data } = await $authHost.get("user/get/" + id);
-  //console.log(data);
   return data;
 };

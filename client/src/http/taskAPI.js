@@ -2,24 +2,20 @@ import { $authHost } from "./index";
 
 export const createTask = async (task) => {
   const { data } = await $authHost.post("task/create", task);
-  console.log(data);
   return data;
 };
 export const updateTask = async (task) => {
   const { data } = await $authHost.post("task/update", task);
-  console.log(data);
   return data;
 };
 export const getAllTask = async (id) => {
   const { data } = await $authHost.post("task/get", { id });
-  console.log(data);
   return data;
 };
 export const getGroupByResponsible = async (id) => {
   const { data } = await $authHost.post("task/getGroupByResponsible", {
     id,
   });
-  console.log(data);
   return data;
 };
 export const getGroupByDate = async (id, date) => {
@@ -27,7 +23,6 @@ export const getGroupByDate = async (id, date) => {
     id,
     date,
   });
-  console.log(data);
   return data;
 };
 export const getSort = async (id, sort, date) => {
@@ -44,6 +39,5 @@ export const getSort = async (id, sort, date) => {
     date,
     endDate,
   });
-  console.log(data);
   return data;
 };

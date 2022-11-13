@@ -7,7 +7,7 @@ const User = sequelize.define('users', {
     lastname: {type: DataTypes.STRING, allowNull: false},
     patronymic: {type: DataTypes.STRING, allowNull: false},
     login: {type: DataTypes.CHAR, allowNull: false},
-    password: {type: DataTypes.CHAR, allowNull: false},
+    password: {type: DataTypes.STRING, allowNull: false},
     manager: {type: DataTypes.INTEGER, allowNull: true},
 })
 

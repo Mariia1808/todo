@@ -33,10 +33,12 @@ const Registration = () => {
       !login ||
       !password
     ) {
-      setError('Не все поля заполнены');
+      setError("Не все поля заполнены");
     } else {
-      setError('');
-      registration(name, lastname, patronymic, managerID, login, password)
+      setError("");
+      registration(name, lastname, patronymic, managerID, login, password).then(
+        (data) => (data ? setError(data) : toNavigate("/main"))
+      );
     }
   };
 
